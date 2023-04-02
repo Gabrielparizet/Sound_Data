@@ -24,10 +24,6 @@ def format_tempo(float):
 duration = librosa.get_duration(y=y, sr=sr)
 
 
-# Get the duration of our audiofile in seconds with librosa get_duration method.
-duration = librosa.get_duration(y=y, sr=sr)
-
-
 # The seconds_to_minutes function takes time in float as an argument and converts it to string giving its time in minutes and seconds. 
 def seconds_to_minutes (time):
     formated = "{:.2f}".format(time/60)
