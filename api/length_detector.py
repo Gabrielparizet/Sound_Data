@@ -7,7 +7,7 @@ def find_length(filename):
     # Get the duration of our audiofile in seconds with librosa get_duration method.
     duration = librosa.get_duration(y=y, sr=sr)
     file_duration = seconds_to_minutes(duration)
-    return f'Your audio file is {file_duration} long.'
+    return file_duration
 
 
 # The seconds_to_minutes function takes time in float as an argument and converts it to string giving its time in minutes and seconds. 
