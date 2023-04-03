@@ -1,5 +1,6 @@
-# Import flask. Add the Flask.request object. Add the Flask.json object.
-from flask import Flask, request, jsonify
+# Import flask. Add the Flask.flash, Flask.request,  Flask.redirect, Flask.url_for objects. Add the Flask.json object.
+from flask import Flask, flash, request, redirect, url_for, jsonify
+
 # Instantiate flask app and assign it to app variable.
 app = Flask(__name__)
 

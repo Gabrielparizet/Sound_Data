@@ -1,9 +1,9 @@
 import librosa
 
 # find_length takes an audio file as argument and returns a formatted string that indicates the length of that audio file.
-def find_length(file_name):
+def find_length(filename):
     # librosa.load is used to load the audio file into memory as a waveform "y" and a sample rate "sr".
-    y, sr = librosa.load(file_name)
+    y, sr = librosa.load(filename)
     # Get the duration of our audiofile in seconds with librosa get_duration method.
     duration = librosa.get_duration(y=y, sr=sr)
     file_duration = seconds_to_minutes(duration)
