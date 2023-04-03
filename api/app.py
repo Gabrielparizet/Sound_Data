@@ -1,5 +1,5 @@
-# Import flask. Add the Flask.request object.
-from flask import Flask, request
+# Import flask. Add the Flask.request object. Add the Flask.json object.
+from flask import Flask, request, jsonify
 # Instantiate flask app and assign it to app variable.
 app = Flask(__name__)
 
@@ -15,6 +15,10 @@ def upload_file():
    audio_file = request.files["audioFile"]
    audio_file.save("/Users/gabrielparizet/Desktop/Sound_Data/api/audio_files/" + audio_file.filename)
    new_path = "/Users/gabrielparizet/Desktop/Sound_Data/api/audio_files/" + audio_file.filename
-   result_response = find_tempo(new_path) + " " + find_length(new_path)
-   return result_response
+   audio_file_data = {
+      "tempo": find_tempo(new_path),
+      "duration": find_length(new_path)
+   }
+   # result_response = find_tempo(new_path) + " " + find_length(new_path)
+   return jsonify(audio_file_data)
 
