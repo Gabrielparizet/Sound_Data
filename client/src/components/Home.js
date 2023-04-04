@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function AudioUploader() {
+export default function Home() {
 
   //Creating selectedFile constant using useState to create a state for when audiofile has been selected by the user.
   const [selectedFile, setSelectedFile] = useState(null);
