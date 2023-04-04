@@ -39,16 +39,16 @@ export default function Home() {
 
 
   return (
-    <div>
-      <body class="px-16 py-6">
-        <div id="drop-zone" class="border-2 border-dashed border-gray-300 p-4 rounded-lg shadow-inner text-center">
-          <form class="font-bold mt-12 pb-2" onSubmit={handleSubmit}>
-            <label class="mb-2 ">
+    <div className="grid h-screen place-items-center">
+      <body className="px-16 py-6" >
+        <div id="drop-zone" className="border-2 border-dashed border-gray-300 p-4 rounded-lg shadow-inner text-center">
+          <form className="font-bold mt-12 pb-2" onSubmit={handleSubmit}>
+            <label className="mb-2 ">
               Drag and drop audio file here:
               <input type="file" onChange={handleFileChange}/>
             </label>
-            <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" type="submit" disabled={!selectedFile}>
-              <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" type="submit" disabled={!selectedFile}>
+              <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
               <span>Upload</span>
             </button>
           </form>
